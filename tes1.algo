@@ -1,0 +1,26 @@
+ALGORITHM firstTask
+VAR
+    phrase: STRING;
+    nbreMots, nbreVoyelles: INTEGER;
+    i,m,v: INTEGER;
+BEGIN
+    write("Toute grande existence est coupable.");
+    read(phrase);
+    FOR i FROM 0 TO phrase.length STEP 1 DO
+        read(phrase[i]);
+        i:=i+1;
+    END_FOR
+    m:=1;
+    FOR i FROM 0 TO phrase.length STEP 1 DO
+        IF (phrase[i]="") THEN
+            m:=m+1;
+        END_IF
+    END_FOR
+    v:=1;
+    FOR i FROM 0 TO phrase.length STEP 1 DO
+        IF (phrase[i]="a" OR phrase[i]="e" OR phrase[i]="i" OR phrase[i]="o" OR phrase[i]="u" OR phrase[i]="y") THEN
+            v:=v+1;
+        END_IF
+        nbreVoyelles=v;
+    END_FOR
+END

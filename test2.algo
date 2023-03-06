@@ -1,0 +1,20 @@
+ALGORITHM secondTask
+VAR
+    tableau1 : ARRAY_OF INTEGER[9];
+    tableau2 : ARRAY_OF INTEGER[9];
+    somme: INTEGER
+    i,j:INTEGER;
+BEGIN
+    tableau1:={4,6,8,9,2,0,8,7,11,19};
+    tableau2:={3,5,7,17,8,12,14,7,1,20};
+    somme:=0;
+    FOR i FROM 0 TO tableau1.length STEP 1 DO
+        FOR j FROM 0 TO tableau2.length STEP 1 DO
+            IF (tableau1[i] <> tableau2[j]) THEN
+                somme:=tableau1[i] + tableau2[j];
+                i:=i+1;
+                j:=j+1;
+            END_IF
+        END_FOR
+    END_FOR
+END
